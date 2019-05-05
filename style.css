@@ -22,6 +22,9 @@ body {
 header {
   font-size: 0.8rem;
   margin-bottom: 20px;
+}
+
+header p {
   color: #888;
 }
 
