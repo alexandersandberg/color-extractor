@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Color extractor</title>
+  <title>Color extractor by Alexander Sandberg</title>
   <style>
     html,
     body {
@@ -131,14 +130,13 @@
     }
   </style>
 </head>
-
 <body>
   <header>Made by <a href="https://github.com/alexandersandberg">Alexander Sandberg</a> / <a href="https://github.com/alexandersandberg/color-extractor">GitHub repo</a></header>
   <span class="note">Supported formats: #rgb, #rgba, #rrggbb, #rrggbbaa</span>
   <form id="form">
     <textarea name="input" id="input" placeholder="Code input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
     <div class="actions">
-      <input type="submit" id="run" value="Extract">
+      <input type="submit" id="extract" value="Extract">
       <span class="note">or press Enter</span>
       <button id="example">Example</button>
     </div>
@@ -148,12 +146,10 @@
     const form = document.querySelector("#form");
     const input = document.querySelector("#input");
     const output = document.querySelector("#output");
-    const button = document.querySelector("#run");
+    const extract = document.querySelector("#extract");
     const example = document.querySelector("#example");
 
     function extractColors(code) {
-      this.code = code;
-
       const filterHex = /#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{3})/g;
       parsedColors = code.match(filterHex);
 
@@ -161,8 +157,6 @@
     }
 
     function generateColorBlocks(uniqueColors) {
-      this.uniqueColors = uniqueColors;
-
       uniqueColors.map((color) => {
         let colorBlock = document.createElement("div");
         let colorText = document.createElement("span");
@@ -178,7 +172,6 @@
     }
 
     function getAccessibleTextColor(backgroundColor){
-
       if(backgroundColor.length < 7) {
         backgroundColor = backgroundColor.replace("#", "")
           .split("")
