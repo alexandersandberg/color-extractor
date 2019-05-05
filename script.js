@@ -6,7 +6,22 @@ const example = document.querySelector("#example");
 
 function extractColors(code) {
   const filterHex = /#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{3})/g;
-  parsedColors = code.toLowerCase().match(filterHex);
+  const allColors = code.toLowerCase().match(filterHex);
+
+  const parsedColors = [];
+  allColors.map(color => {
+    // Converts shorthand formats (like #rgba to #rrggbbaa) for the calculations
+    if (color.length < 7) {
+      color = color.replace("#", "")
+        .split("")
+        .map(v => v + v)
+        .join('');
+
+      color = "#" + color;
+    }
+
+    parsedColors.push(color);
+  });
 
   return [...new Set(parsedColors)];
 }
@@ -27,13 +42,6 @@ function generateColorBlocks(uniqueColors) {
 }
 
 function getAccessibleTextColor(backgroundColor){
-  if(backgroundColor.length < 7) {
-    backgroundColor = backgroundColor.replace("#", "")
-      .split("")
-      .map(v => v + v)
-      .join('');
-  }
-
   const hexRed = parseInt(backgroundColor.substring(1,3), 16);
   const hexGreen = parseInt(backgroundColor.substring(3,5), 16);
   const hexBlue = parseInt(backgroundColor.substring(5,7), 16);
@@ -65,7 +73,7 @@ form.addEventListener("submit", (e) => {
 });
 
 example.addEventListener("click", (e) => {
-  input.value = `"colors": [ "#333a", "#fff", "#44475Aff", #fff, #fff, "#6272A4", "#8BE9FD", "#1E3A", "#FFB86C", "#FF79C6", "#BD93F9ff" ]`;
+  input.value = `"colors": [ "#333a", "#fff", "#44475Aff", #FFF, #fff, "#6272A4", "#8BE9FD", "#1E3A", "#FFB86C", "#FF79C6", "#BD93F9ff" ]`;
   generateColors();
   e.preventDefault();
 });
