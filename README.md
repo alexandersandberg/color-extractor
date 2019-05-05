@@ -1,7 +1,7 @@
-# Color extractor
+# 🎨 Color extractor
 
 ## About the project
-This is a simple tool that allows you to extract unique color values from a piece of code.
+This is a simple tool that allows you to extract **unique color values** from a piece of code.
 
 Currently, the tool supports the following (*case insensitive*) formats: `#rgb`, `#rgba`, `#rrggbb`, and `#rrggbbaa`.
 
@@ -14,15 +14,15 @@ Currently, the tool supports the following (*case insensitive*) formats: `#rgb`,
 ## Contributing
 Feel free to open issues for feature requests or bugs!
 
-## About
-*A project by Alexander Sandberg*
+## A project by Alexander Sandberg
+Thanks for checking out my project! ❤️
 
-You can find me online here:<br>
-* [Website](https://alexandersandberg.com)<br>
-* [Twitter](https://twitter.com/alexandberg)<br>
-* [Medium](https://medium.com/@alexandersandberg)<br>
-* [Instagram](https://www.instagram.com/sandbergalexander/)<br>
-* [LinkedIn](https://www.linkedin.com/in/sandbergalex/)<br>
+If you want to get in touch, or check out my other work, you can find me online here:
+* [Website](https://alexandersandberg.com) (alexandersandberg.com)
+* [Twitter](https://twitter.com/alexandberg) (@alexandberg)
+* [Medium](https://medium.com/@alexandersandberg) (@alexandersandberg)
+* [Instagram](https://www.instagram.com/sandbergalexander/) (@sandbergalexander)
+* [LinkedIn](https://www.linkedin.com/in/sandbergalex/) (@sandbergalexander)
 
 ## License
 Distributed under the MIT License © [Alexander Sandberg](https://github.com/alexandersandberg)
