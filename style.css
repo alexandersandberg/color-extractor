@@ -102,6 +102,7 @@ button:focus {
   height: 110px;
   margin: 10px;
   border-radius: 5px;
+  box-shadow: 0 3px 15px #0002;
 }
 
 #output span {
