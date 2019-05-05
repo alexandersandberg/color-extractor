@@ -65,7 +65,7 @@ form.addEventListener("submit", (e) => {
 });
 
 example.addEventListener("click", (e) => {
-  input.value = `"colors": [ "#333a", "#fff", "#44475Aff", "#6272A4", "#8BE9FD", "#1E3A", "#FFB86C", "#FF79C6", "#BD93F9ff" ]`;
+  input.value = `"colors": [ "#333a", "#fff", "#44475Aff", #fff, #fff, "#6272A4", "#8BE9FD", "#1E3A", "#FFB86C", "#FF79C6", "#BD93F9ff" ]`;
   generateColors();
   e.preventDefault();
 });
