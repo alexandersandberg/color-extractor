@@ -15,7 +15,7 @@ function extractColors(code) {
       color = color.replace("#", "")
         .split("")
         .map(v => v + v)
-        .join('');
+        .join("");
 
       color = "#" + color;
     }
