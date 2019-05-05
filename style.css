@@ -15,6 +15,8 @@ body {
   color: #252414;
   background-color: #ffffff;
   padding: 30px;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 header {
