@@ -32,7 +32,6 @@ function generateColorBlocks(uniqueColors) {
     let colorText = document.createElement("span");
 
     colorBlock.style.backgroundColor = color;
-    colorBlock.style.boxShadow = "0 3px 15px #0002";
     colorText.textContent = color;
     colorText.style.color = getAccessibleTextColor(color);
 
