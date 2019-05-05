@@ -6,7 +6,7 @@ const example = document.querySelector("#example");
 
 function extractColors(code) {
   const filterHex = /#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{3})/g;
-  parsedColors = code.match(filterHex);
+  parsedColors = code.toLowerCase().match(filterHex);
 
   return [...new Set(parsedColors)];
 }
