@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  font: 16px/1.35 Courier, monospace;
+  font: 13px/1.35 Courier, monospace;
   color: #252414;
   background-color: #ffffff;
   padding: 30px;
@@ -107,6 +107,7 @@ button:focus {
 @media (min-width: 610px) {
   body {
     padding: 60px;
+    font-size: 16px;
   }
 
   .actions .note {
