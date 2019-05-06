@@ -72,7 +72,7 @@ form.addEventListener("submit", (e) => {
 });
 
 example.addEventListener("click", (e) => {
-  input.value = `"colors": [ "#333a", "#fff", "#44475Aff", #FFF, #fff, "#6272A4", "#8BE9FD", "#1E3A", "#FFB86C", "#FF79C6", "#BD93F9ff" ]`;
+  input.value = `"colors": [ "#333a", "#fff", "#44475Aff", #FFF, #6272A4", "#8BE9FD", "#1E3A" ]\n\n.more { background: #FFB86C; color: #FF79C6; }\n\n/* This #BD93F9ff will also get extracted */`;
   generateColors();
   e.preventDefault();
 });
