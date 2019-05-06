@@ -5,6 +5,7 @@ const extract = document.querySelector("#extract");
 const example = document.querySelector("#example");
 
 function extractColors(code) {
+  if (!code) return false;
   const filterHex = /#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{3})/g;
   const allColors = code.toLowerCase().match(filterHex);
 
@@ -25,6 +26,8 @@ function extractColors(code) {
 
   return [...new Set(parsedColors)];
 }
+
+extractColors(input.value);
 
 function generateColorBlocks(uniqueColors) {
   uniqueColors.map((color) => {
@@ -56,7 +59,12 @@ function getAccessibleTextColor(backgroundColor){
 
 function generateColors() {
   output.textContent = "";
-  generateColorBlocks(extractColors(input.value));
+  const extracted = extractColors(input.value);
+  if (extracted !== false) {
+    generateColorBlocks(extracted);
+  } else {
+    input.setAttribute("placeholder", "Fill me in first!");
+  }
 }
 
 document.addEventListener("keydown", (e) => {
