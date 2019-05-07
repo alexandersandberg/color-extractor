@@ -43,7 +43,6 @@ textarea {
   border-radius: 5px;
 }
 
-input[type="submit"],
 button {
   font: inherit;
   background-color: rgb(77, 173, 173);
@@ -55,8 +54,6 @@ button {
   transition: opacity 0.25s ease;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus,
 button:hover,
 button:focus {
   opacity: .7;
