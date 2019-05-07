@@ -57,6 +57,7 @@ function getAccessibleTextColor(backgroundColor) {
 }
 
 function generateColors() {
+  output.textContent = "";
   const extracted = extractColors(input.value);
   if (extracted !== false) {
     generateColorBlocks(extracted);
