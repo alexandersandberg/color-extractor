@@ -27,8 +27,6 @@ function extractColors(code) {
   return [...new Set(parsedColors)];
 }
 
-extractColors(input.value);
-
 function generateColorBlocks(uniqueColors) {
   uniqueColors.map((color) => {
     let colorBlock = document.createElement("div");
@@ -84,3 +82,32 @@ example.addEventListener("click", (e) => {
   generateColors();
   e.preventDefault();
 });
+
+const drop = document.querySelector(".drop");
+drop.addEventListener("dragover", handleDragOver, false);
+drop.addEventListener("drop", handleFileSelect, false);
+
+function handleFileSelect(e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  const files = Array.from(e.dataTransfer.files);
+
+  let fileContents = "hi";
+  files.map(file => {
+    const reader = new FileReader();
+
+    reader.onloadend = (function(file) {
+      return function(e) {
+        input.textContent += e.target.result;
+      }
+    })(file);
+    reader.readAsText(file);
+  });
+}
+
+function handleDragOver(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  e.dataTransfer.dropEffect = "copy";
+}
