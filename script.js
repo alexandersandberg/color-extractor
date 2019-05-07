@@ -85,13 +85,13 @@ example.addEventListener("click", e => {
 });
 
 // File upload
-input.addEventListener("dragover", e => {
+document.addEventListener("dragover", e => {
   e.stopPropagation();
   e.preventDefault();
   e.dataTransfer.dropEffect = "copy";
 });
 
-input.addEventListener("drop", e => {
+document.addEventListener("drop", e => {
   e.stopPropagation();
   e.preventDefault();
 
