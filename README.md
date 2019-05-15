@@ -9,7 +9,7 @@ Currently, the tool supports the following (*case insensitive*) formats: `#rgb`,
 [**Check it out live**](https://alexandersandberg.github.io/color-extractor/) *or* download the files and open `index.html` in your preferred browser.
 
 ## Preview
-![](preview.png)
+![Color extractor preview](preview.png)
 
 ## Contributing
 Feel free to open issues for feature requests or bugs!
