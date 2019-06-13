@@ -20,9 +20,6 @@ Thanks for checking out my project! ❤️
 If you want to get in touch, or check out my other work, you can find me online here:
 * [Website](https://alexandersandberg.com) (alexandersandberg.com)
 * [Twitter](https://twitter.com/alexandberg) (@alexandberg)
-* [Medium](https://medium.com/@alexandersandberg) (@alexandersandberg)
-* [Instagram](https://www.instagram.com/sandbergalexander/) (@sandbergalexander)
-* [LinkedIn](https://www.linkedin.com/in/sandbergalex/) (@sandbergalexander)
 
 ## License
 Distributed under the MIT License © [Alexander Sandberg](https://github.com/alexandersandberg)
